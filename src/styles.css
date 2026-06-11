@@ -14,10 +14,15 @@ h2 {
 }
 
 .nav-title {
-      font-family: 'Homemade Apple', cursive;
-      color: #FB923C;
-      font-size: 3rem;
-      letter-spacing: 10px;
+  font-family: 'Homemade Apple', cursive;
+  color: #FB923C;
+  font-size: 3rem;
+  letter-spacing: 10px;
+}
+
+.btn:focus {
+  box-shadow: none;    
+  outline: none;
 }
 
 .btn-primary {
@@ -31,6 +36,7 @@ h2 {
     --bs-btn-disabled-bg: #ccc;
     --bs-btn-disabled-border-color: #ccc;
     --bs-btn-disabled-color: #fff;
+    --bs-btn-focus-shadow-rgb: 251, 146, 60;
 }
 
 .btn-secondary {
@@ -40,6 +46,7 @@ h2 {
     --bs-btn-hover-bg: #FB923C;
     --bs-btn-hover-border-color: #FB923C;
     --bs-btn-hover-color: #f8d8b2;
+    --bs-btn-focus-shadow-rgb: 251, 146, 60;
 }
 
 .btn-bocker {
@@ -160,6 +167,14 @@ h2 {
   background-color: #7D6B9E;
 }
 
+.btn-back {
+  color: #FB923C;
+}
+
+.btn-back:hover {
+  --bs-btn-hover-color: #f07007;
+}
+
 .form-label {    
     font-size: 1.3rem;
     font-weight: bold;
@@ -186,3 +201,41 @@ h2 {
 
 
 
+
+
+
+.btn:focus, .btn:focus-visible, .btn:active:focus {
+  --bs-btn-focus-shadow-rgb: 0, 0, 0;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.btn-link:focus, .btn-link:focus-visible {
+  --bs-btn-focus-shadow-rgb: 0, 0, 0;
+  box-shadow: none !important;
+  outline: none !important;
+  color: #FB923C !important;
+}
+
+.btn-link {
+  --bs-btn-focus-shadow-rgb: 0, 0, 0;
+  --bs-btn-color: #FB923C;
+  --bs-btn-hover-color: #e8812e;
+}
+
+
+.btn.btn-primary, .btn.btn-secondary {
+  --bs-btn-focus-shadow-rgb: 251, 146, 60;
+}
+
+.btn-primary:active, .btn-primary:active:focus {
+  --bs-btn-active-bg: #e8812e;
+  --bs-btn-active-border-color: #FED7AA;
+  box-shadow: none !important;
+}
+
+.btn-secondary:active, .btn-secondary:active:focus {
+  --bs-btn-active-bg: #FB923C;
+  --bs-btn-active-border-color: #FB923C;
+  box-shadow: none !important;
+}
