@@ -21,34 +21,25 @@ h2 {
 }
 
 .btn-primary {
-    background-color: #FB923C;
-    border-color: #FED7AA;
-    color: #FED7AA;
-  }
-
-.btn-primary:hover {
-    background-color: #f07007;
-    border-color: #FED7AA;
-    color: #f8d8b2;
-  }
-
-  .btn-primary:disabled {
-      --bs-btn-disabled-bg: #ccc;
-      --bs-btn-disabled-border-color: #ccc;
-      --bs-btn-disabled-color: #fff;
-  }
+    --bs-btn-bg: #FB923C;
+    --bs-btn-border-color: #FED7AA;
+    --bs-btn-color: #FED7AA;
+    --bs-btn-hover-bg: #f07007;
+    --bs-btn-hover-border-color: #FED7AA;
+    --bs-btn-hover-color: #f8d8b2;
+    --bs-btn-disabled-bg: #ccc;
+    --bs-btn-disabled-border-color: #ccc;
+    --bs-btn-disabled-color: #fff;
+}
 
 .btn-secondary {
-    background-color: transparent;
-    border-color: #FB923C;    
-    color: #FB923C;
-  }
-
-.btn-secondary:hover {
-    background-color: #FB923C;
-    border-color: #FB923C;    
-    color: #f8d8b2;
-  }
+    --bs-btn-bg: transparent;
+    --bs-btn-border-color: #FB923C;
+    --bs-btn-color: #FB923C;
+    --bs-btn-hover-bg: #FB923C;
+    --bs-btn-hover-border-color: #FB923C;
+    --bs-btn-hover-color: #f8d8b2;
+}
 
 .btn-bocker {
   position: relative;
@@ -167,6 +158,7 @@ h2 {
 .btn-citat:hover::after {
   background-color: #7D6B9E;
 }
+
 
 
 

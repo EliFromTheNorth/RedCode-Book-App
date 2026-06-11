@@ -15,7 +15,11 @@
 
     <div class="mb-3">
       <label class="form-label" for="publishDate">Publiceringsår</label>
-      <input class="form-control" id="publishDate" name="publishDate" type="number" min="1000" max="2100" [(ngModel)]="book.publishDate" required />
+      <input class="form-control" id="publishDate" name="publishDate" type="text"
+             pattern="[0-9]{4}" [(ngModel)]="book.publishDate" #publishDateField="ngModel" required />
+      <div *ngIf="publishDateField.invalid && (publishDateField.touched || publishDateField.dirty)" class="text-danger small mt-1">
+        Ogiltigt format, ange ett fullständigt år
+      </div>
     </div>
 
     <button class="btn btn-primary w-100 mb-4 fs-5 fw-bold" type="submit" [disabled]="bookForm.invalid">Lägg till</button>
