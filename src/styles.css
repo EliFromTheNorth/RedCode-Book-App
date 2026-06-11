@@ -206,13 +206,6 @@ h2 {
     font-size: 1.1rem;
   }
 
-
-
-
-
-
-
-
 .btn:focus, .btn:focus-visible, .btn:active:focus {
   --bs-btn-focus-shadow-rgb: 0, 0, 0;
   box-shadow: none !important;
@@ -247,4 +240,13 @@ h2 {
   --bs-btn-active-bg: #FB923C;
   --bs-btn-active-border-color: #FB923C;
   box-shadow: none !important;
+}
+
+.btn-edit {
+  color: #FB923C;
+}
+
+.btn-icon:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s ease;
 }

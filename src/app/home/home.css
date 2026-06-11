@@ -1,14 +1,4 @@
 ﻿.book-item {
   border-color: #FB923C !important;
-  width: 50%;
-  
-}
-
-.btn-edit {
-  color: #FB923C;
-}
-
-.btn-icon:hover {
-  transform: scale(1.2);
-  transition: transform 0.2s ease;
+  width: 50%;  
 }
