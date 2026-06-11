@@ -167,6 +167,15 @@ h2 {
   background-color: #7D6B9E;
 }
 
+.btn-bocker:active {
+  background-color: #1A5276 !important;    
+  color: #6DC5E0 !important;
+  }
+
+.btn-citat:active {
+  background-color: #9B8BBB !important;
+  }
+
 .btn-back {
   color: #FB923C;
 }
