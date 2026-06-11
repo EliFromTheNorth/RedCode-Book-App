@@ -22,6 +22,7 @@ h2 {
 
 .btn-primary {
     --bs-btn-bg: #FB923C;
+    --bs-btn-border-radius: 15px;
     --bs-btn-border-color: #FED7AA;
     --bs-btn-color: #FED7AA;
     --bs-btn-hover-bg: #f07007;
@@ -158,6 +159,28 @@ h2 {
 .btn-citat:hover::after {
   background-color: #7D6B9E;
 }
+
+.form-label {    
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #5D4037;
+  }
+
+.form-control {
+    font-size: 1.3rem;
+    color: #5D4037;
+    border-radius: 10px;
+    border-color: #5D4037;
+  }
+
+.form-control:focus {
+    border-color: #FB923C;    
+    box-shadow: 0 0 0 0.25rem rgba(251, 146, 60,   0.25);
+  }
+
+  .text-danger {
+    font-size: 1.1rem;
+  }
 
 
 

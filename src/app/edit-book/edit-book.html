@@ -1,20 +1,26 @@
-<h2>Edit Book</h2>
+<div class="d-flex flex-column align-items-center 
+  py-4">
+  <h2>Edit Book</h2>
 
-<form (ngSubmit)="onSubmit()" #bookForm="ngForm">
-  <div>
-    <label for="title">Title</label>
-    <input id="title" name="title" [(ngModel)]="book.title" required />
-  </div>
+  <form class="py-5 col-12 col-md-7 col-lg-5" (ngSubmit)="onSubmit()" #bookForm="ngForm">
+    <div class="mb-3">
+      <label class="form-label" for="title">Titel</label>
+      <input class="form-control" id="title" name="title" [(ngModel)]="book.title" required />
+    </div>
 
-  <div>
-    <label for="author">Author</label>
-    <input id="author" name="author" [(ngModel)]="book.author" required />
-  </div>
+    <div class="mb-3">
+      <label class="form-label" for="author">Författare</label>
+      <input class="form-control" id="author" name="author" [(ngModel)]="book.author" required />
+    </div>
 
-  <div>
-    <label for="publishDate">Year Published</label>
-    <input id="publishDate" name="publishDate" type="number" min="1000" max="2100" [(ngModel)]="book.publishDate" required />
-  </div>
+    <div class="mb-3">
+      <label class="form-label" for="publishDate">Publiceringsår</label>
+      <input class="form-control w-25" id="publishDate" name="publishDate" type="text"
+             pattern="[0-9]{4}" [(ngModel)]="book.publishDate" #publishDateField="ngModel" required />
+      <div *ngIf="publishDateField.invalid && (publishDateField.touched || publishDateField.dirty)" class="text-danger small mt-1">
+        Ogiltigt format, ange ett fullständigt år
+      </div>    </div>
 
-  <button type="submit" [disabled]="bookForm.invalid">Save Changes</button>
-</form>
+    <button class="btn btn-primary w-100 mb-4 fs-5 fw-bold" type="submit" [disabled]="bookForm.invalid">Spara ändringar</button>
+  </form>
+</div>
