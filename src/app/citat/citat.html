@@ -1,0 +1,13 @@
+<h2>Citat</h2>
+
+<button routerLink="/add-citat" *ngIf="citater.length < 5">Add Citat</button>
+
+<ul>
+  <li *ngFor="let citat of citater">
+    "{{ citat.text }}" <span *ngIf="citat.author">— {{ citat.author }}</span>
+    <button [routerLink]="['/edit-citat', citat.id]">Edit</button>
+    <button (click)="deleteCitat(citat.id!, citat.text)">Delete</button>
+  </li>
+</ul>
+
+<p *ngIf="citater.length >= 5">Maximum of 5 quotes reached. Delete one to add a new quote.</p>

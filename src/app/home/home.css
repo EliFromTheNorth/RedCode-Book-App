@@ -1,0 +1,9 @@
+.book-item {
+  border-color: #FB923C !important;
+  /* border-radius: 50px !important; */
+  width: 50%;
+}
+
+.btn-edit {
+  color: #FB923C;
+}

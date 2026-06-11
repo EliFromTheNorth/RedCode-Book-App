@@ -1,0 +1,15 @@
+<h2>Add Citat</h2>
+
+<form (ngSubmit)="onSubmit()" #citatForm="ngForm">
+  <div>
+    <label for="text">Quote</label>
+    <textarea id="text" name="text" [(ngModel)]="citat.text" required></textarea>
+  </div>
+
+  <div>
+    <label for="author">Author</label>
+    <input id="author" name="author" [(ngModel)]="citat.author" />
+  </div>
+
+  <button type="submit" [disabled]="citatForm.invalid">Add Citat</button>
+</form>

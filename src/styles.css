@@ -1,1 +1,139 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #FEF0DC;
+}
+
+.nav-title {
+      font-family: 'Homemade Apple', cursive;
+      color: #FB923C;
+      font-size: 3rem;
+      letter-spacing: 10px;
+}
+
+  .btn-primary {
+    background-color: #FB923C;
+    border-color: #FED7AA;    
+    color: #FED7AA;
+  }
+
+  .btn-secondary {
+    background-color: transparent;
+    border-color: #FB923C;    
+    color: #FB923C;
+  }
+
+.btn-bocker {
+  position: relative;
+  border: none;
+  border-radius: 6px;
+  min-width: 220px;
+  width: 30vw;
+  max-width: 350px;
+  height: 40px;
+  background-color: #4BAFD6;
+  color: #1A5276;
+  letter-spacing: 8px;
+  font-weight: 900;
+  font-size: 13px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.btn-bocker::before {
+  content: '';
+  position: absolute;
+  right: 28px;
+  top: 0;
+  width: 10px;
+  height: 100%;
+  background-color: #6DC5E0;
+  opacity: 0.7;
+}
+
+.btn-bocker::after {
+  content: '';
+  position: absolute;
+  right: 14px;
+  top: 0;
+  width: 10px;
+  height: 100%;
+  background-color: #6DC5E0;
+  opacity: 0.7;
+}
+
+.btn-bocker:hover {
+  /* opacity: 0.85; */
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
+  background-color: #1A5276;
+  color: #6DC5E0;
+}
+
+.btn-citat {
+  position: relative;
+  border: none;
+  border-radius: 6px;
+  width: 280px;
+  height: 44px;
+  background-color: #7D6B9E;
+  color: #2C3E50;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 12px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* left stripe */
+.btn-citat::before {
+  content: '';
+  position: absolute;
+  left: 18px;
+  top: 0;
+  width: 8px;
+  height: 100%;
+  background-color: #9B8BBB;
+}
+
+/* right stripe */
+.btn-citat::after {
+  content: '';
+  position: absolute;
+  right: 18px;
+  top: 0;
+  width: 8px;
+  height: 100%;
+  background-color: #9B8BBB;
+}
+
+/* teal center box - use box-shadow to fake it since we used both pseudo elements */
+.btn-citat span {
+  position: relative;
+  display: inline-block;
+  background-color: #bfcc8e;
+  padding: 4px 30px;
+  border-radius: 4px;
+  color: #2C3E50;
+}
+
+.btn-citat:hover {
+    background-color: #9B8BBB;
+    transform: translateY(-2px);
+    transition: all 0.2s ease;
+
+}
+
+.btn-citat:hover::before {
+  background-color: #7D6B9E;
+}
+
+.btn-citat:hover::after {
+  background-color: #7D6B9E;
+}
