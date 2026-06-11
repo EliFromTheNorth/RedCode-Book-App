@@ -44,15 +44,15 @@
   <nav class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column align-items-center justify-content-center gap-3">
     <h1 class="nav-title fw-bold mb-2 ">Min Bokhylla</h1>
     <div class="d-flex flex-column align-items-center">
-      <button routerLink="/" class="btn fw-bold btn-book btn-bocker"><h2>Mina Böcker</h2></button>
+      <button routerLink="/" class="btn btn-book btn-bocker">Böcker</button>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 45" width="400" height="45" style="display: block;">
         <rect x="0" y="0" width="398" height="44" rx="22" fill="#F5A623"/>
         <rect x="185" y="0" width="45" height="44" fill="#F5A623"/>
         <rect x="22" y="6" width="376" height="32" rx="12" fill="#FEFAE0"/>
       </svg>
-      <button routerLink="/citat" class="btn btn-book btn-citat fw-bold"><h2>Citat</h2></button>
+      <button routerLink="/citat" class="btn btn-book btn-citat fw-bold">Citat</button>
     </div>
-    <button (click)="logout()" class="btn btn-secondary fw-bold position-absolute" style="top: 10px; right: 10px;">Logout</button>
+    <button (click)="logout()" class="btn btn-secondary fw-bold fs-5 position-absolute" style="top: 10px; right: 10px;">Logga ut</button>
   </nav>
 
 </div>

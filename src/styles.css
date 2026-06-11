@@ -1,5 +1,16 @@
-body {
+﻿body {
     background-color: #FEF0DC;
+    font-family: 'Nunito', sans-serif;
+}
+
+h2 {
+  font-family: 'Dancing Script', cursive;
+  color: #5D4037;
+  font-size: 4rem;
+  font-weight: 700;
+  border-bottom: 2px solid #E67E22;
+  padding-bottom: 4px;
+  display: inline-block;
 }
 
 .nav-title {
@@ -9,16 +20,34 @@ body {
       letter-spacing: 10px;
 }
 
-  .btn-primary {
+.btn-primary {
     background-color: #FB923C;
-    border-color: #FED7AA;    
+    border-color: #FED7AA;
     color: #FED7AA;
   }
 
-  .btn-secondary {
+.btn-primary:hover {
+    background-color: #f07007;
+    border-color: #FED7AA;
+    color: #f8d8b2;
+  }
+
+  .btn-primary:disabled {
+      --bs-btn-disabled-bg: #ccc;
+      --bs-btn-disabled-border-color: #ccc;
+      --bs-btn-disabled-color: #fff;
+  }
+
+.btn-secondary {
     background-color: transparent;
     border-color: #FB923C;    
     color: #FB923C;
+  }
+
+.btn-secondary:hover {
+    background-color: #FB923C;
+    border-color: #FB923C;    
+    color: #f8d8b2;
   }
 
 .btn-bocker {
@@ -31,9 +60,10 @@ body {
   height: 40px;
   background-color: #4BAFD6;
   color: #1A5276;
-  letter-spacing: 8px;
-  font-weight: 900;
-  font-size: 13px;
+  font-family: 'Nunito', sans-serif;
+  letter-spacing: 6px;
+  font-weight: 700;
+  font-size: 32px;
   padding: 0;
   display: flex;
   align-items: center;
@@ -65,7 +95,6 @@ body {
 }
 
 .btn-bocker:hover {
-  /* opacity: 0.85; */
   transform: translateY(-2px);
   transition: all 0.2s ease;
   background-color: #1A5276;
@@ -80,9 +109,10 @@ body {
   height: 44px;
   background-color: #7D6B9E;
   color: #2C3E50;
-  font-weight: bold;
-  font-size: 13px;
-  letter-spacing: 12px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: 6px;
   padding: 0;
   display: flex;
   align-items: center;
@@ -137,3 +167,7 @@ body {
 .btn-citat:hover::after {
   background-color: #7D6B9E;
 }
+
+
+
+
