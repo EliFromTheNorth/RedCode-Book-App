@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { CitatService } from '../citat.service';
 
 @Component({
   selector: 'app-add-citat',
-  imports: [FormsModule],
+  imports: [FormsModule, RouterLink],
   templateUrl: './add-citat.html',
   styleUrl: './add-citat.css',
 })
