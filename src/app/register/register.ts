@@ -13,7 +13,12 @@ import { AuthService } from '../auth';
 export class Register {
   username = '';
   password = '';
+  confirmPassword = '';
   error = '';
+
+  get passwordMismatch(): boolean {
+    return this.confirmPassword.length > 0 && this.password !== this.confirmPassword;
+  }
 
   constructor(private authService: AuthService, private router: Router) {}
 
