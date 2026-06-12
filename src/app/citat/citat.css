@@ -1,5 +1,12 @@
 .citat-item {
-    border-color: #5D4037 !important;
+  border-color: #5D4037 !important;
+  width: 90%;
+}
+
+@media (min-width: 768px) {
+  .citat-item {
+    width: 50%;
+  }
 }
 
 .citat-text {

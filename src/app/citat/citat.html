@@ -5,7 +5,7 @@
   <button class="btn btn-primary mb-4 fs-5 fw-bold" routerLink="/add-citat" *ngIf="citater.length < 5">Lägg till citat</button>
 
   <ul class="list-unstyled w-100 d-flex flex-column align-items-center gap-2">
-    <li *ngFor="let citat of citater" class="citat-item d-flex align-items-center gap-3 border border-3 rounded-5 px-4 py-2" style="width: 50%;">
+    <li *ngFor="let citat of citater" class="citat-item d-flex align-items-center gap-3 border border-3 rounded-5 px-4 py-2">
       <div class="d-flex flex-column">
         <span class="fw-bold fs-5 citat-text">"{{ citat.text }}"</span>
         <span *ngIf="citat.author" class="fs-6">— {{ citat.author }}</span>

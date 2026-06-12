@@ -1,4 +1,10 @@
 ﻿.book-item {
   border-color: #FB923C !important;
-  width: 50%;  
+  width: 90%;
+}
+
+@media (min-width: 768px) {
+  .book-item {
+    width: 50%;
+  }
 }
