@@ -1,19 +1,20 @@
-<h2>Login</h2>
+<div class="d-flex flex-column align-items-center py-4">
 
-<form (ngSubmit)="onSubmit()" #loginForm="ngForm">
-  <div>
-    <label for="username">Username</label>
-    <input id="username" name="username" [(ngModel)]="username" required />
-  </div>
+  <form class="py-5 col-12 col-md-7 col-lg-5" (ngSubmit)="onSubmit()" #loginForm="ngForm">
+    <div class="mb-3">
+      <label class="form-label" for="username">Användarnamn</label>
+      <input class="form-control" id="username" name="username" [(ngModel)]="username" required />
+    </div>
 
-  <div>
-    <label for="password">Password</label>
-    <input id="password" name="password" type="password" [(ngModel)]="password" required />
-  </div>
+    <div class="mb-3">
+      <label class="form-label" for="password">Lösenord</label>
+      <input class="form-control" id="password" name="password" type="password" [(ngModel)]="password" required />
+    </div>
 
-  <p *ngIf="error">{{ error }}</p>
+    <div *ngIf="error" class="text-danger mb-3">{{ error }}</div>
 
-  <button type="submit" [disabled]="loginForm.invalid">Login</button>
-</form>
+    <button class="btn btn-primary w-100 fs-5 fw-bold" type="submit" [disabled]="loginForm.invalid">Logga in</button>
+  </form>
 
-<p>Don't have an account? <a routerLink="/register">Register here</a></p>
+  <p>Har du inget konto? <a routerLink="/register">Registrera dig här</a></p>
+</div>
