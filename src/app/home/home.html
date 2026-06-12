@@ -18,3 +18,23 @@
   </ul>
 
 </div>
+
+<!-- Delete confirmation modal -->
+<div class="modal-backdrop fade show" *ngIf="showDeleteModal" (click)="cancelDelete()"></div>
+<div class="modal fade show d-block" *ngIf="showDeleteModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-4">
+      <div class="modal-header border-0 pb-0">
+        <h5 class="modal-title fw-bold">Ta bort bok</h5>
+        <button type="button" class="btn-close" (click)="cancelDelete()"></button>
+      </div>
+      <div class="modal-body">
+        Är du säker på att du vill ta bort <strong>"{{ pendingDeleteTitle }}"</strong>?
+      </div>
+      <div class="modal-footer border-0 pt-0">
+        <button type="button" class="btn btn-secondary rounded-pill" (click)="cancelDelete()">Avbryt</button>
+        <button type="button" class="btn btn-danger rounded-pill" (click)="confirmDelete()">Ta bort</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -11,6 +11,9 @@ import { BookService, Book } from '../book';
 })
 export class Home implements OnInit {
   books: Book[] = [];
+  showDeleteModal = false;
+  pendingDeleteId: number | null = null;
+  pendingDeleteTitle = '';
 
   constructor(private bookService: BookService) {}
 
@@ -21,9 +24,22 @@ export class Home implements OnInit {
   }
 
   deleteBook(id: number, title: string) {
-    if (!confirm(`Are you sure you want to delete "${title}"?`)) return;
-    this.bookService.deleteBook(id).subscribe(() => {
-      this.books = this.books.filter(b => b.id !== id);
+    this.pendingDeleteId = id;
+    this.pendingDeleteTitle = title;
+    this.showDeleteModal = true;
+  }
+
+  confirmDelete() {
+    if (this.pendingDeleteId == null) return;
+    this.bookService.deleteBook(this.pendingDeleteId).subscribe(() => {
+      this.books = this.books.filter(b => b.id !== this.pendingDeleteId);
+      this.cancelDelete();
     });
+  }
+
+  cancelDelete() {
+    this.showDeleteModal = false;
+    this.pendingDeleteId = null;
+    this.pendingDeleteTitle = '';
   }
 }

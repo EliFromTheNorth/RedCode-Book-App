@@ -11,6 +11,9 @@ import { CitatService, Citat as CitatItem } from '../citat.service';
 })
 export class Citat implements OnInit {
   citater: CitatItem[] = [];
+  showDeleteModal = false;
+  pendingDeleteId: number | null = null;
+  pendingDeleteText = '';
 
   constructor(private citatService: CitatService) {}
 
@@ -21,9 +24,22 @@ export class Citat implements OnInit {
   }
 
   deleteCitat(id: number, text: string) {
-    if (!confirm(`Are you sure you want to delete "${text}"?`)) return;
-    this.citatService.deleteCitat(id).subscribe(() => {
-      this.citater = this.citater.filter(c => c.id !== id);
+    this.pendingDeleteId = id;
+    this.pendingDeleteText = text;
+    this.showDeleteModal = true;
+  }
+
+  confirmDelete() {
+    if (this.pendingDeleteId == null) return;
+    this.citatService.deleteCitat(this.pendingDeleteId).subscribe(() => {
+      this.citater = this.citater.filter(c => c.id !== this.pendingDeleteId);
+      this.cancelDelete();
     });
+  }
+
+  cancelDelete() {
+    this.showDeleteModal = false;
+    this.pendingDeleteId = null;
+    this.pendingDeleteText = '';
   }
 }
